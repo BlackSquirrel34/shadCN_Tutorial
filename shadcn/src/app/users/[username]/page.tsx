@@ -25,6 +25,8 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import EditUser from "@/components/EditUser";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { UserChart } from "@/components/UserChart";
 
 const SingleUserPage = () => {
   return (
@@ -172,9 +174,26 @@ const SingleUserPage = () => {
         {/* RIGHT */}
         <div className="w-full xl:w-2/3 space-y-6">
           {/*  USER CARD CONTAINER  */}
-          <div className="bg-primary-foreground p-4 rounded-lg">User Card</div>
+          <div className="bg-primary-foreground p-4 rounded-lg space-y-2">
+            <div className="flex items-center gap-2">
+              <Avatar className="size-12">
+                <AvatarImage src="https://avatars.githubusercontent.com/u/1486366" />
+                <AvatarFallback>JD</AvatarFallback>
+              </Avatar>
+
+              <h1 className="text-xl font-semibold">John Doe</h1>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+              nemo ea aliquam quas suscipit alias minus reprehenderit placeat
+              debitis iusto beatae eos accusamus, enim at non sint incidunt
+              illum vitae.
+            </p>
+          </div>
           {/*  CHART CONTAINER  */}
-          <div className="bg-primary-foreground p-4 rounded-lg">Chart</div>
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <UserChart />
+          </div>
         </div>
       </div>
     </div>
